@@ -5,13 +5,11 @@ import { getRouter } from './router'
 import './styles.css'
 
 const hostname = window.location.hostname
-const railwayDomain = import.meta.env.VITE_RAILWAY_PUBLIC_DOMAIN as string | undefined
 
 const isLocal =
   hostname === 'localhost' ||
   hostname === '127.0.0.1' ||
-  hostname.startsWith('192.168.') ||
-  !railwayDomain
+  hostname.startsWith('192.168.')
 
 if (isLocal) {
   const root = document.getElementById('root')!
@@ -28,7 +26,6 @@ if (isLocal) {
         This app only runs on Railway production.
         Local development is not supported.
       </p>
-      ${railwayDomain ? `<p style="font-size:0.875rem;color:#525252;">Production: <a href="https://${railwayDomain}" style="color:#6366f1;text-decoration:none;">https://${railwayDomain}</a></p>` : ''}
     </div>
   `
 } else {
