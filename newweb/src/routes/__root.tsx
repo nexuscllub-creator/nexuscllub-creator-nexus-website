@@ -1,5 +1,3 @@
-'use client';
-
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -7,8 +5,6 @@ import {
   createRootRouteWithContext,
   useRouter,
 } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -68,37 +64,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NEXUS Club — Connecting Cultures, Creating Unity" },
-      { name: "description", content: "نادي نيكسوس — مركز التعليم المكثف للغات، جامعة أحمد بن يحيى الونشريسي تيسمسيلت" },
-      { name: "author", content: "NEXUS Club" },
-      { property: "og:title", content: "NEXUS Club" },
-      { property: "og:description", content: "Connecting Cultures, Creating Unity" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&family=Amiri:wght@400;700&display=swap",
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
