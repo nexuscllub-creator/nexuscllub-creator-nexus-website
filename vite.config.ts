@@ -1,4 +1,3 @@
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import tailwindcss from '@tailwindcss/vite';
@@ -14,5 +13,10 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  preview: {
+    allowedHosts: [
+      'nexuscllub-creator-nexus-website-production.up.railway.app'
+    ]
   }
 });
