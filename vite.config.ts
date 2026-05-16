@@ -3,7 +3,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath, URL } from 'node:url';
 
-export default defineConfig({
+export default {
   plugins: [
     tailwindcss(),
     react(),
@@ -19,4 +19,4 @@ export default defineConfig({
       'nexuscllub-creator-nexus-website-production.up.railway.app'
     ]
   }
-});
+};
