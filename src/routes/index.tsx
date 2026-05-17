@@ -59,7 +59,7 @@ function Index() {
       </Suspense>
 
       {/* MAIN */}
-      <main className="relative z-10 mx-auto w-full max-w-[1100px] px-6 pt-10 pb-16">
+      <main className="relative z-10 mx-auto w-full max-w-[1150px] px-6 pt-10 pb-16">
 
         {/* HEADER */}
         <header className="relative">
@@ -250,117 +250,154 @@ function Index() {
             backdrop-blur-md
             px-6
             py-14
+            overflow-x-auto
           ">
             <OrnateBorder />
 
-            <div className="
-              grid
-              grid-cols-1
-              md:grid-cols-5
-              gap-8
-              text-center
-            ">
+            <table className="w-full table-fixed text-center border-collapse">
 
-              {/* N */}
-              <div className="flex flex-col items-center">
-                <h3 className="font-display gold-gradient text-5xl mb-5">
-                  N
-                </h3>
+              <tbody>
 
-                <p className="italic text-sm min-h-[90px] flex items-center">
-                  Nexsfra diversita: l'est nostra fortza
-                </p>
+                {/* LETTERS */}
+                <tr>
 
-                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
+                  <td className="pb-6">
+                    <h3 className="font-display gold-gradient text-5xl">
+                      N
+                    </h3>
+                  </td>
 
-                <Users
-                  className="h-8 w-8 text-gold"
-                  strokeWidth={1.5}
-                />
-              </div>
+                  <td className="pb-6">
+                    <h3 className="font-display gold-gradient text-5xl">
+                      E
+                    </h3>
+                  </td>
 
-              {/* E */}
-              <div className="flex flex-col items-center">
-                <h3 className="font-display gold-gradient text-5xl mb-5">
-                  E
-                </h3>
+                  <td className="pb-6">
+                    <h3 className="font-display gold-gradient text-5xl">
+                      X
+                    </h3>
+                  </td>
 
-                <p className="italic text-sm min-h-[90px] flex items-center">
-                  Edungor les liens, les cultures et les perspectives
-                </p>
+                  <td className="pb-6">
+                    <h3 className="font-display gold-gradient text-5xl">
+                      U
+                    </h3>
+                  </td>
 
-                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
+                  <td className="pb-6">
+                    <h3 className="font-display gold-gradient text-5xl">
+                      S
+                    </h3>
+                  </td>
 
-                <Globe
-                  className="h-8 w-8 text-gold"
-                  strokeWidth={1.5}
-                />
-              </div>
+                </tr>
 
-              {/* X */}
-              <div className="flex flex-col items-center">
-                <h3 className="font-display gold-gradient text-5xl mb-5">
-                  X
-                </h3>
+                {/* TEXT */}
+                <tr>
 
-                <p
-                  dir="rtl"
-                  className="
-                    font-arabic
-                    text-lg
-                    min-h-[90px]
-                    flex
-                    items-center
-                  "
-                >
-                  أنت المتغيِّر
-                </p>
+                  <td className="px-3 align-top">
+                    <p className="italic text-sm leading-relaxed">
+                      Nexsfra diversita: l'est nostra fortza
+                    </p>
+                  </td>
 
-                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
+                  <td className="px-3 align-top">
+                    <p className="italic text-sm leading-relaxed">
+                      Edungor les liens, les cultures et les perspectives
+                    </p>
+                  </td>
 
-                <Lightbulb
-                  className="h-8 w-8 text-gold"
-                  strokeWidth={1.5}
-                />
-              </div>
+                  <td className="px-3 align-top">
+                    <p
+                      dir="rtl"
+                      className="font-arabic text-lg leading-relaxed"
+                    >
+                      أنت المتغيِّر
+                    </p>
+                  </td>
 
-              {/* U */}
-              <div className="flex flex-col items-center">
-                <h3 className="font-display gold-gradient text-5xl mb-5">
-                  U
-                </h3>
+                  <td className="px-3 align-top">
+                    <p className="italic text-sm leading-relaxed">
+                      Unitate diver à conifate
+                    </p>
+                  </td>
 
-                <p className="italic text-sm min-h-[90px] flex items-center">
-                  Unitate diver à conifate
-                </p>
+                  <td className="px-3 align-top">
+                    <p className="italic text-sm leading-relaxed">
+                      Skills define your identity
+                    </p>
+                  </td>
 
-                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
+                </tr>
 
-                <Handshake
-                  className="h-8 w-8 text-gold"
-                  strokeWidth={1.5}
-                />
-              </div>
+                {/* LINES */}
+                <tr>
 
-              {/* S */}
-              <div className="flex flex-col items-center">
-                <h3 className="font-display gold-gradient text-5xl mb-5">
-                  S
-                </h3>
+                  <td className="py-5">
+                    <div className="mx-auto h-px w-12 bg-gold/60" />
+                  </td>
 
-                <p className="italic text-sm min-h-[90px] flex items-center">
-                  Skills define your identity
-                </p>
+                  <td className="py-5">
+                    <div className="mx-auto h-px w-12 bg-gold/60" />
+                  </td>
 
-                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
+                  <td className="py-5">
+                    <div className="mx-auto h-px w-12 bg-gold/60" />
+                  </td>
 
-                <Star
-                  className="h-8 w-8 text-gold"
-                  strokeWidth={1.5}
-                />
-              </div>
+                  <td className="py-5">
+                    <div className="mx-auto h-px w-12 bg-gold/60" />
+                  </td>
 
-            </div>
+                  <td className="py-5">
+                    <div className="mx-auto h-px w-12 bg-gold/60" />
+                  </td>
+
+                </tr>
+
+                {/* ICONS */}
+                <tr>
+
+                  <td>
+                    <Users
+                      className="mx-auto h-8 w-8 text-gold"
+                      strokeWidth={1.5}
+                    />
+                  </td>
+
+                  <td>
+                    <Globe
+                      className="mx-auto h-8 w-8 text-gold"
+                      strokeWidth={1.5}
+                    />
+                  </td>
+
+                  <td>
+                    <Lightbulb
+                      className="mx-auto h-8 w-8 text-gold"
+                      strokeWidth={1.5}
+                    />
+                  </td>
+
+                  <td>
+                    <Handshake
+                      className="mx-auto h-8 w-8 text-gold"
+                      strokeWidth={1.5}
+                    />
+                  </td>
+
+                  <td>
+                    <Star
+                      className="mx-auto h-8 w-8 text-gold"
+                      strokeWidth={1.5}
+                    />
+                  </td>
+
+                </tr>
+
+              </tbody>
+            </table>
           </div>
         </section>
 
