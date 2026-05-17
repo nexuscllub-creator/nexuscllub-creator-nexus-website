@@ -286,17 +286,16 @@ function Index() {
           ">
             <OrnateBorder />
 
-            <ul className="
-              grid
-              grid-cols-1
-              sm:grid-cols-2
-              md:grid-cols-5
-              gap-8
-            ">
+            <div className="flex flex-wrap justify-between gap-y-10">
+
               {values.map((v, i) => (
-                <li
+                <div
                   key={i}
                   className="
+                    w-full
+                    sm:w-[48%]
+                    md:w-[18%]
+
                     flex
                     flex-col
                     items-center
@@ -309,7 +308,7 @@ function Index() {
                     font-display
                     gold-gradient
                     text-5xl
-                    mb-6
+                    mb-5
                   ">
                     {v.letter}
                   </h3>
@@ -358,9 +357,9 @@ function Index() {
                     "
                     strokeWidth={1.5}
                   />
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
