@@ -3,12 +3,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { lazy, Suspense } from "react";
 
-let SpaceScene = lazy(() => import("@/components/SpaceScene").then(m => ({ default: m.SpaceScene })));
-import nexusEmblem from'use client';
-
-import { createFileRoute } from "@tanstack/react-router";
-import { lazy, Suspense } from "react";
-
 let SpaceScene = lazy(() =>
   import("@/components/SpaceScene").then(m => ({
     default: m.SpaceScene,
@@ -52,29 +46,34 @@ export const Route = createFileRoute("/")({
 
 const values = [
   {
-    icon: Star,
-    title: "Skills define your identity",
+    letter: "N",
+    icon: Users,
+    title: "Nexsfra diversita: l'est nostra fortza",
   },
 
   {
-    icon: Handshake,
-    title: "Unitate diver à conifate",
+    letter: "E",
+    icon: Globe,
+    title: "Edungor les liens, les cultures et les perspectives",
   },
 
   {
+    letter: "X",
     icon: Lightbulb,
     title: "أنت المتغيِّر",
     arabic: true,
   },
 
   {
-    icon: Globe,
-    title: "Edungor les liens, les cultures et les perspectives",
+    letter: "U",
+    icon: Handshake,
+    title: "Unitate diver à conifate",
   },
 
   {
-    icon: Users,
-    title: "Nexsfra diversita: l'est nostra fortza",
+    letter: "S",
+    icon: Star,
+    title: "Skills define your identity",
   },
 ];
 
@@ -239,7 +238,7 @@ function Index() {
           </p>
         </section>
 
-        {/* LIGHT SECTION */}
+        {/* QUOTE */}
         <section className="relative mt-24">
 
           <div className="
@@ -287,17 +286,6 @@ function Index() {
           ">
             <OrnateBorder />
 
-            <h3 className="
-              font-display
-              text-center
-              gold-gradient
-              text-4xl
-              tracking-[0.55em]
-              mb-10
-            ">
-              N · E · X · U · S
-            </h3>
-
             <ul className="
               grid
               grid-cols-1
@@ -317,12 +305,33 @@ function Index() {
                     px-2
                   "
                 >
+
+                  {/* LETTER */}
+                  <h3 className="
+                    font-display
+                    gold-gradient
+                    text-5xl
+                    tracking-[0.2em]
+                  ">
+                    {v.letter}
+                  </h3>
+
+                  {/* LINE */}
+                  <span className="
+                    block
+                    h-px
+                    w-10
+                    bg-gold/60
+                  " />
+
+                  {/* TEXT */}
                   <p
                     dir={v.arabic ? "rtl" : "ltr"}
                     className={`
                       text-sm
-                      leading-snug
-                      min-h-[5rem]
+                      leading-relaxed
+                      min-h-[6rem]
+
                       flex
                       items-center
                       justify-center
@@ -339,13 +348,7 @@ function Index() {
                     {v.title}
                   </p>
 
-                  <span className="
-                    block
-                    h-px
-                    w-12
-                    bg-gold/60
-                  " />
-
+                  {/* ICON */}
                   <v.icon
                     className="
                       h-8
@@ -360,7 +363,7 @@ function Index() {
           </div>
         </section>
 
-        {/* Cmiloud1brai git*/}
+        {/* CTA */}
         <section className="
           mt-14
           flex
