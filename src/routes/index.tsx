@@ -44,39 +44,6 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const values = [
-  {
-    letter: "N",
-    icon: Users,
-    title: "Nexsfra diversita: l'est nostra fortza",
-  },
-
-  {
-    letter: "E",
-    icon: Globe,
-    title: "Edungor les liens, les cultures et les perspectives",
-  },
-
-  {
-    letter: "X",
-    icon: Lightbulb,
-    title: "أنت المتغيِّر",
-    arabic: true,
-  },
-
-  {
-    letter: "U",
-    icon: Handshake,
-    title: "Unitate diver à conifate",
-  },
-
-  {
-    letter: "S",
-    icon: Star,
-    title: "Skills define your identity",
-  },
-];
-
 function Index() {
   return (
     <div
@@ -286,79 +253,113 @@ function Index() {
           ">
             <OrnateBorder />
 
-            <div className="flex flex-wrap justify-between gap-y-10">
+            <div className="
+              grid
+              grid-cols-1
+              md:grid-cols-5
+              gap-8
+              text-center
+            ">
 
-              {values.map((v, i) => (
-                <div
-                  key={i}
+              {/* N */}
+              <div className="flex flex-col items-center">
+                <h3 className="font-display gold-gradient text-5xl mb-5">
+                  N
+                </h3>
+
+                <p className="italic text-sm min-h-[90px] flex items-center">
+                  Nexsfra diversita: l'est nostra fortza
+                </p>
+
+                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
+
+                <Users
+                  className="h-8 w-8 text-gold"
+                  strokeWidth={1.5}
+                />
+              </div>
+
+              {/* E */}
+              <div className="flex flex-col items-center">
+                <h3 className="font-display gold-gradient text-5xl mb-5">
+                  E
+                </h3>
+
+                <p className="italic text-sm min-h-[90px] flex items-center">
+                  Edungor les liens, les cultures et les perspectives
+                </p>
+
+                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
+
+                <Globe
+                  className="h-8 w-8 text-gold"
+                  strokeWidth={1.5}
+                />
+              </div>
+
+              {/* X */}
+              <div className="flex flex-col items-center">
+                <h3 className="font-display gold-gradient text-5xl mb-5">
+                  X
+                </h3>
+
+                <p
+                  dir="rtl"
                   className="
-                    w-full
-                    sm:w-[48%]
-                    md:w-[18%]
-
+                    font-arabic
+                    text-lg
+                    min-h-[90px]
                     flex
-                    flex-col
                     items-center
-                    text-center
                   "
                 >
+                  أنت المتغيِّر
+                </p>
 
-                  {/* LETTER */}
-                  <h3 className="
-                    font-display
-                    gold-gradient
-                    text-5xl
-                    mb-5
-                  ">
-                    {v.letter}
-                  </h3>
+                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
 
-                  {/* TEXT */}
-                  <p
-                    dir={v.arabic ? "rtl" : "ltr"}
-                    className={`
-                      min-h-[90px]
+                <Lightbulb
+                  className="h-8 w-8 text-gold"
+                  strokeWidth={1.5}
+                />
+              </div>
 
-                      flex
-                      items-center
-                      justify-center
+              {/* U */}
+              <div className="flex flex-col items-center">
+                <h3 className="font-display gold-gradient text-5xl mb-5">
+                  U
+                </h3>
 
-                      text-center
-                      leading-relaxed
+                <p className="italic text-sm min-h-[90px] flex items-center">
+                  Unitate diver à conifate
+                </p>
 
-                      ${
-                        v.arabic
-                          ? "font-arabic text-lg"
-                          : "italic text-sm"
-                      }
+                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
 
-                      text-foreground/90
-                    `}
-                  >
-                    {v.title}
-                  </p>
+                <Handshake
+                  className="h-8 w-8 text-gold"
+                  strokeWidth={1.5}
+                />
+              </div>
 
-                  {/* LINE */}
-                  <span className="
-                    mt-4
-                    mb-5
-                    block
-                    h-px
-                    w-12
-                    bg-gold/60
-                  " />
+              {/* S */}
+              <div className="flex flex-col items-center">
+                <h3 className="font-display gold-gradient text-5xl mb-5">
+                  S
+                </h3>
 
-                  {/* ICON */}
-                  <v.icon
-                    className="
-                      h-8
-                      w-8
-                      text-gold
-                    "
-                    strokeWidth={1.5}
-                  />
-                </div>
-              ))}
+                <p className="italic text-sm min-h-[90px] flex items-center">
+                  Skills define your identity
+                </p>
+
+                <span className="mt-4 mb-5 h-px w-12 bg-gold/60" />
+
+                <Star
+                  className="h-8 w-8 text-gold"
+                  strokeWidth={1.5}
+                />
+              </div>
+
             </div>
           </div>
         </section>
