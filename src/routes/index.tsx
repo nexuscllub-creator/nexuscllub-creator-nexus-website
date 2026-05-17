@@ -92,7 +92,7 @@ function Index() {
       </Suspense>
 
       {/* MAIN */}
-      <main className="relative z-10 mx-auto w-full max-w-[1000px] px-6 pt-10 pb-16">
+      <main className="relative z-10 mx-auto w-full max-w-[1100px] px-6 pt-10 pb-16">
 
         {/* HEADER */}
         <header className="relative">
@@ -244,7 +244,7 @@ function Index() {
           <div className="
             relative
             mx-auto
-            max-w-[600px]
+            max-w-[650px]
             rounded-2xl
             border
             border-gold/70
@@ -282,7 +282,7 @@ function Index() {
             bg-background/80
             backdrop-blur-md
             px-6
-            py-12
+            py-14
           ">
             <OrnateBorder />
 
@@ -291,7 +291,7 @@ function Index() {
               grid-cols-1
               sm:grid-cols-2
               md:grid-cols-5
-              gap-6
+              gap-8
             ">
               {values.map((v, i) => (
                 <li
@@ -301,8 +301,6 @@ function Index() {
                     flex-col
                     items-center
                     text-center
-                    gap-4
-                    px-2
                   "
                 >
 
@@ -311,35 +309,28 @@ function Index() {
                     font-display
                     gold-gradient
                     text-5xl
-                    tracking-[0.2em]
+                    mb-6
                   ">
                     {v.letter}
                   </h3>
-
-                  {/* LINE */}
-                  <span className="
-                    block
-                    h-px
-                    w-10
-                    bg-gold/60
-                  " />
 
                   {/* TEXT */}
                   <p
                     dir={v.arabic ? "rtl" : "ltr"}
                     className={`
-                      text-sm
-                      leading-relaxed
-                      min-h-[6rem]
+                      min-h-[90px]
 
                       flex
                       items-center
                       justify-center
 
+                      text-center
+                      leading-relaxed
+
                       ${
                         v.arabic
                           ? "font-arabic text-lg"
-                          : "italic"
+                          : "italic text-sm"
                       }
 
                       text-foreground/90
@@ -347,6 +338,16 @@ function Index() {
                   >
                     {v.title}
                   </p>
+
+                  {/* LINE */}
+                  <span className="
+                    mt-4
+                    mb-5
+                    block
+                    h-px
+                    w-12
+                    bg-gold/60
+                  " />
 
                   {/* ICON */}
                   <v.icon
