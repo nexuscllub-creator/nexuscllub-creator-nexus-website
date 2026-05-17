@@ -41,13 +41,13 @@ export const Route = createFileRoute("/")({
 
 const values = [
   {
-    icon: Users,
-    title: "Nexsfra diversita: l'est nostra fortza",
+    icon: Star,
+    title: "Skills define your identity",
   },
 
   {
-    icon: Globe,
-    title: "Edungor les liens, les cultures et les perspectives",
+    icon: Handshake,
+    title: "Unitate diver à conifate",
   },
 
   {
@@ -57,15 +57,16 @@ const values = [
   },
 
   {
-    icon: Handshake,
-    title: "Unitate diver à conifate",
+    icon: Globe,
+    title: "Edungor les liens, les cultures et les perspectives",
   },
 
   {
-    icon: Star,
-    title: "Skills define your identity",
+    icon: Users,
+    title: "Nexsfra diversita: l'est nostra fortza",
   },
 ];
+
 
 function Index() {
   return (
@@ -84,7 +85,7 @@ function Index() {
       {/* MAIN */}
       <main className="relative z-10 mx-auto w-full max-w-[1000px] px-6 pt-10 pb-16">
 
-        {/* HEADER */}
+        {/* HEADER miloud1brai*/}
         <header className="relative">
           <div className="relative rounded-2xl border border-gold/70 bg-background/70 backdrop-blur-md px-6 py-8">
             
